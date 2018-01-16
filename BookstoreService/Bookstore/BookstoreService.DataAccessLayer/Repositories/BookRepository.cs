@@ -17,35 +17,35 @@ namespace BookstoreService.DataAccessLayer.Repositories
 
 		public async Task<IEnumerable<Book>> GetAsync()
 		{
-			return await this.context.Books.ToListAsync();
+			return await context.Books.ToListAsync();
 		}
 
 		public async Task<int> AddAsync(Book book)
 		{
-			var newBook = this.context.Add(book);
-			await this.context.SaveChangesAsync();
+			var newBook = context.Add(book);
+			await context.SaveChangesAsync();
 			return newBook.Entity.Id;
 		}
 
 		public async Task DeleteAsync(int id)
 		{
-			var attachedBook = await this.context.FindAsync<Book>(id);
-			this.context.Remove(attachedBook);
-			await this.context.SaveChangesAsync();
+			var attachedBook = await context.FindAsync<Book>(id);
+			context.Remove(attachedBook);
+			await context.SaveChangesAsync();
 		}
 
 		public async Task UpdateAsync(int id, Book newBook)
 		{
-			var existing = await this.GetById(id);
+			var existing = await GetById(id);
 			existing.Author = newBook.Author;
 			existing.Title = newBook.Title;
 
-			await this.context.SaveChangesAsync();
+			await context.SaveChangesAsync();
 		}
 
 		public async Task<Book> GetById(int id)
 		{
-			return await this.context.Books.FindAsync(id);
+			return await context.Books.FindAsync(id);
 		}
 	}
 

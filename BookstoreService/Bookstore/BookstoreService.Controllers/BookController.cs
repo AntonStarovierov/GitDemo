@@ -21,8 +21,8 @@ namespace BookstoreService.Controllers
 
 		public BookController(IBookService service, IBookActionsLoggerService bookActionLogger, IOptions<ServiceConfiguration> settings)
 		{
-			this._service = service;
-			this._bookActionLogger = bookActionLogger;
+			_service = service;
+			_bookActionLogger = bookActionLogger;
 			_configuration = settings.Value;
 		}
 

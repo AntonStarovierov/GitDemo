@@ -12,7 +12,7 @@ namespace HistoryService.DataAccessLayer.Repositories
 
 		public HistoryRepository(HistoryDbContext context)
 		{
-			this._context = context;
+			_context = context;
 		}
 
 		public async Task<IEnumerable<AuthHistory>> GetAuthHistoryAsync()

@@ -7,16 +7,16 @@ namespace BookstoreService.BusinessLayer.Services
 {
 	public class BookActionsLoggerService : IBookActionsLoggerService
 	{
-		private readonly IServiceCommunicationFactory factory;
+		private readonly IServiceCommunicationFactory _factory;
 
 		public BookActionsLoggerService(IServiceCommunicationFactory factory)
 		{
-			this.factory = factory;
+			_factory = factory;
 		}
 
 		public async Task LogBookAction(string token, LogParameters parameters, string url)
 		{
-			using (var communicator = factory.GetServiceCommunicator(token))
+			using (var communicator = _factory.GetServiceCommunicator(token))
 			{
 				await communicator.PutAsync(url, JsonConvert.SerializeObject(parameters));
 			}

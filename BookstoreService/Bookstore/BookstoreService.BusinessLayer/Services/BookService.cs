@@ -20,7 +20,7 @@ namespace BookstoreService.BusinessLayer.Services
 
 		public BookService(IBookRepository repository)
 		{
-			this._repository = repository;
+			_repository = repository;
 		}
 
 		public async Task<IEnumerable<Book>> GetAsync()
