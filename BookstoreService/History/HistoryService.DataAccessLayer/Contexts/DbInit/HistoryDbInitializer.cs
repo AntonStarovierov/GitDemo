@@ -5,6 +5,7 @@
 		public static void Initialize(HistoryDbContext context)
 		{
 			context.Database.EnsureCreated();
+			var  a = "222";
 		}
 	}
 }
