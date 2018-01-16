@@ -17,13 +17,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookstoreService.Host", "Bo
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HistoryService.Host", "History\HistoryService.Host\HistoryService.Host.csproj", "{9F046181-5A41-4E99-876C-A263691E909F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuthenticationService.DataAccessLayer", "Authentication\AuthenticationService.DataAccessLayer\AuthenticationService.DataAccessLayer.csproj", "{96AB4FC4-85BC-459E-A302-9EC7F95074FC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AuthenticationService.DataAccessLayer", "Authentication\AuthenticationService.DataAccessLayer\AuthenticationService.DataAccessLayer.csproj", "{96AB4FC4-85BC-459E-A302-9EC7F95074FC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuthenticationService.BusinessLayer", "Authentication\AuthenticationService.BusinessLayer\AuthenticationService.BusinessLayer.csproj", "{25912A9A-0788-4C9E-BF6B-3858920330A0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AuthenticationService.BusinessLayer", "Authentication\AuthenticationService.BusinessLayer\AuthenticationService.BusinessLayer.csproj", "{25912A9A-0788-4C9E-BF6B-3858920330A0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuthenticationService.Controllers", "Authentication\AuthenticationService.Controllers\AuthenticationService.Controllers.csproj", "{46193044-20CD-44D8-86BD-DEE2DB1C2DF8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AuthenticationService.Controllers", "Authentication\AuthenticationService.Controllers\AuthenticationService.Controllers.csproj", "{46193044-20CD-44D8-86BD-DEE2DB1C2DF8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookstoreService.DataAccessLayer", "Bookstore\BookstoreService.DataAccessLayer\BookstoreService.DataAccessLayer.csproj", "{422AC807-FC08-448A-8A7F-ACABFE010CEE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookstoreService.DataAccessLayer", "Bookstore\BookstoreService.DataAccessLayer\BookstoreService.DataAccessLayer.csproj", "{422AC807-FC08-448A-8A7F-ACABFE010CEE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookstoreService.BusinessLayer", "Bookstore\BookstoreService.BusinessLayer\BookstoreService.BusinessLayer.csproj", "{9C26BE32-3E21-430A-A223-89A4464D5EE3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -63,6 +65,10 @@ Global
 		{422AC807-FC08-448A-8A7F-ACABFE010CEE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{422AC807-FC08-448A-8A7F-ACABFE010CEE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{422AC807-FC08-448A-8A7F-ACABFE010CEE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9C26BE32-3E21-430A-A223-89A4464D5EE3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C26BE32-3E21-430A-A223-89A4464D5EE3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C26BE32-3E21-430A-A223-89A4464D5EE3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C26BE32-3E21-430A-A223-89A4464D5EE3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -75,6 +81,7 @@ Global
 		{25912A9A-0788-4C9E-BF6B-3858920330A0} = {67728E41-4EC4-4113-8D45-85D6BBA0A08F}
 		{46193044-20CD-44D8-86BD-DEE2DB1C2DF8} = {67728E41-4EC4-4113-8D45-85D6BBA0A08F}
 		{422AC807-FC08-448A-8A7F-ACABFE010CEE} = {A0B0EC16-4F27-4579-98D3-C82845E1AEDB}
+		{9C26BE32-3E21-430A-A223-89A4464D5EE3} = {A0B0EC16-4F27-4579-98D3-C82845E1AEDB}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4C924F67-F26F-4248-8065-F06F552A1A56}
