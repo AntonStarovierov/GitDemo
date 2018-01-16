@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\BookstoreService.Base\BookstoreService.Base.csproj" />
+    <ProjectReference Include="..\AuthenticationService.DataAccessLayer\AuthenticationService.DataAccessLayer.csproj" />
+  </ItemGroup>
+
+</Project>

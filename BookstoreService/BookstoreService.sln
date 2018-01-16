@@ -19,6 +19,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HistoryService.Host", "Hist
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuthenticationService.DataAccessLayer", "Authentication\AuthenticationService.DataAccessLayer\AuthenticationService.DataAccessLayer.csproj", "{96AB4FC4-85BC-459E-A302-9EC7F95074FC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuthenticationService.BusinessLayer", "Authentication\AuthenticationService.BusinessLayer\AuthenticationService.BusinessLayer.csproj", "{25912A9A-0788-4C9E-BF6B-3858920330A0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{96AB4FC4-85BC-459E-A302-9EC7F95074FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{96AB4FC4-85BC-459E-A302-9EC7F95074FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{96AB4FC4-85BC-459E-A302-9EC7F95074FC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{25912A9A-0788-4C9E-BF6B-3858920330A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{25912A9A-0788-4C9E-BF6B-3858920330A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{25912A9A-0788-4C9E-BF6B-3858920330A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{25912A9A-0788-4C9E-BF6B-3858920330A0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -54,6 +60,7 @@ Global
 		{1037CC9F-8288-43A8-9842-7459430C8783} = {A0B0EC16-4F27-4579-98D3-C82845E1AEDB}
 		{9F046181-5A41-4E99-876C-A263691E909F} = {B5643546-D697-42E0-97E9-96DD5BA88065}
 		{96AB4FC4-85BC-459E-A302-9EC7F95074FC} = {67728E41-4EC4-4113-8D45-85D6BBA0A08F}
+		{25912A9A-0788-4C9E-BF6B-3858920330A0} = {67728E41-4EC4-4113-8D45-85D6BBA0A08F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4C924F67-F26F-4248-8065-F06F552A1A56}
