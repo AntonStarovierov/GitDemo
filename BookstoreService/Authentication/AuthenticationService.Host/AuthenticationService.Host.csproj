@@ -19,6 +19,7 @@
   <ItemGroup>
     <ProjectReference Include="..\..\BookstoreService.Base\BookstoreService.Base.csproj" />
     <ProjectReference Include="..\AuthenticationService.BusinessLayer\AuthenticationService.BusinessLayer.csproj" />
+    <ProjectReference Include="..\AuthenticationService.Controllers\AuthenticationService.Controllers.csproj" />
     <ProjectReference Include="..\AuthenticationService.DataAccessLayer\AuthenticationService.DataAccessLayer.csproj" />
   </ItemGroup>
 
