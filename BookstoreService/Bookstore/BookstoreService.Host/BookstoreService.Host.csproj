@@ -19,6 +19,7 @@
   <ItemGroup>
     <ProjectReference Include="..\..\BookstoreService.Base\BookstoreService.Base.csproj" />
     <ProjectReference Include="..\BookstoreService.BusinessLayer\BookstoreService.BusinessLayer.csproj" />
+    <ProjectReference Include="..\BookstoreService.Controllers\BookstoreService.Controllers.csproj" />
     <ProjectReference Include="..\BookstoreService.DataAccessLayer\BookstoreService.DataAccessLayer.csproj" />
   </ItemGroup>
 
