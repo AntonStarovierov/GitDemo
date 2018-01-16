@@ -16,4 +16,10 @@
     <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\HistoryService.BusinessLayer\HistoryService.BusinessLayer.csproj" />
+    <ProjectReference Include="..\HistoryService.Controllers\HistoryService.Controllers.csproj" />
+    <ProjectReference Include="..\HistoryService.DataAccessLayer\HistoryService.DataAccessLayer.csproj" />
+  </ItemGroup>
+
 </Project>
