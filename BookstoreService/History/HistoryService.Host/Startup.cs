@@ -1,11 +1,12 @@
 ﻿using BookstoreService.Base.Auth;
 using BookstoreService.Base.ServiceCommunicator;
+using HistoryService.BusinessLayer.Services;
 using HistoryService.DataAccessLayer.Contexts;
 using HistoryService.DataAccessLayer.Contexts.DbInit;
+using HistoryService.DataAccessLayer.Repositories;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
@@ -31,6 +32,7 @@ namespace HistoryService.Host
 			services.AddDbContext<HistoryDbContext>(options =>
 				options.UseSqlServer(Configuration.GetConnectionString("HistoryConnection")));
 
+			services.AddTransient<IHistoryService, BusinessLayer.Services.HistoryService>();
 			services.AddTransient<IHistoryRepository, HistoryRepository>();
 
 			services.AddTransient<IServiceCommunicator, ServiceCommunicator>();
