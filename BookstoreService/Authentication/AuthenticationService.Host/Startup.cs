@@ -1,40 +1,61 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿//using AuthenticationService.BusinessLayer.Services;
+using AuthenticationService.DataAccessLayer.Contexts;
+using AuthenticationService.DataAccessLayer.Contexts.DbInit;
+using AuthenticationService.DataAccessLayer.Repositories;
+using BookstoreService.Base.Auth;
+using BookstoreService.Base.Configuration;
+using BookstoreService.Base.ServiceCommunicator;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Options;
+//using Services.Base.Auth;
+//using Services.Base.Configuration;
+//using Services.Base.ServiceCommunicator;
 
 namespace AuthenticationService.Host
 {
-    public class Startup
-    {
-        public Startup(IConfiguration configuration)
-        {
-            Configuration = configuration;
-        }
+	public class Startup
+	{
+		public Startup(IHostingEnvironment env)
+		{
+			var builder = new ConfigurationBuilder()
+				.SetBasePath(env.ContentRootPath)
+				.AddJsonFile("appsettings.json", false, true)
+				.AddJsonFile($"appsettings.{env.EnvironmentName}.json", true)
+				.AddEnvironmentVariables();
+			this.Configuration = builder.Build();
+		}
 
-        public IConfiguration Configuration { get; }
+		public IConfigurationRoot Configuration { get; }
 
-        // This method gets called by the runtime. Use this method to add services to the container.
-        public void ConfigureServices(IServiceCollection services)
-        {
-            services.AddMvc();
-        }
+		public void ConfigureServices(IServiceCollection services)
+		{
+			services.AddDbContext<AuthenticationDbContext>(options =>
+				options.UseSqlServer(this.Configuration.GetConnectionString("AuthConnection")));
 
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
-        {
-            if (env.IsDevelopment())
-            {
-                app.UseDeveloperExceptionPage();
-            }
+			//services.AddTransient<IUserService, UserService>();
+			services.AddTransient<IUserRepository, UserRepository>();
 
-            app.UseMvc();
-        }
-    }
+			services.AddTransient<IServiceCommunicator, ServiceCommunicator>();
+			services.AddTransient<IServiceCommunicationFactory, ServiceCommunicationFactory>();
+
+			//services.AddTransient<IAuthActionLoggerService, AuthActionsLoggerService>();
+
+			services.Configure<ServiceConfiguration>(this.Configuration.GetSection("ServicesUrls"));
+
+			services.AddMvc();
+		}
+
+		public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory, AuthenticationDbContext context)
+		{
+			loggerFactory.AddConsole(this.Configuration.GetSection("Logging"));
+			loggerFactory.AddDebug();
+			StartupConfigureAuth.ConfigureAuth(app);
+			app.UseMvc();
+			AuthenticationDbInitializer.Initialize(context);
+		}
+	}
 }
