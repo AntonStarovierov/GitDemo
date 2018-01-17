@@ -11,6 +11,7 @@ namespace BookstoreService.Base.Auth
 		public const int Lifetime = 60; //60 minutes
 		public static SymmetricSecurityKey GetSymmetricSecurityKey()
 		{
+			var a = 1;
 			return new SymmetricSecurityKey(Encoding.ASCII.GetBytes(Key));
 		}
 	}
