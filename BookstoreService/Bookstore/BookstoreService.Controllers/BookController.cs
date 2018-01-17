@@ -21,6 +21,7 @@ namespace BookstoreService.Controllers
 
 		public BookController(IBookService service, IBookActionsLoggerService bookActionLogger, IOptions<ServiceConfiguration> settings)
 		{
+			var a = 1;
 			_service = service;
 			_bookActionLogger = bookActionLogger;
 			_configuration = settings.Value;
@@ -31,6 +32,7 @@ namespace BookstoreService.Controllers
 		[HttpGet]
 		public async Task<Book> GetBook(int id)
 		{
+			var a = 4;
 			LogHistory(new LogParameters {UserAction = UserAction.BookRequest.ToString(), BookId = id});
 			return await _service.GetById(id);
 		}
