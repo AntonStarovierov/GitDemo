@@ -7,10 +7,6 @@ namespace BookstoreService.Base.Auth
 	{
 		public static void ConfigureAuth(IApplicationBuilder app)
 		{
-			var a = 1;
-			var b = 2;
-			var c = 3;
-			var d = 4;
 			app.UseJwtBearerAuthentication(new JwtBearerOptions
 			{
 				AutomaticAuthenticate = true,
