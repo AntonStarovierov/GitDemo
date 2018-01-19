@@ -54,6 +54,7 @@ namespace AuthenticationService.Controllers
 		[HttpPut]
 		public async Task CreateUser([FromBody] User user)
 		{
+			var a = 1;
 			await _service.AddAsync(user);
 			var token = CreateToken(await _service.GetIdentity(user.Login, user.Password));
 			await GenerateToken(user);
