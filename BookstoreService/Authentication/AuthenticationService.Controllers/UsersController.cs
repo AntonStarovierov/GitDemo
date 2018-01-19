@@ -54,6 +54,7 @@ namespace AuthenticationService.Controllers
 		[HttpPut]
 		public async Task CreateUser([FromBody] User user)
 		{
+			var a = 1;
 			await _service.AddAsync(user);
 			var token = CreateToken(await _service.GetIdentity(user.Login, user.Password));
 			await GenerateToken(user);
@@ -75,6 +76,7 @@ namespace AuthenticationService.Controllers
 		[HttpPost]
 		public async Task UpdateUser([FromBody] User newUser)
 		{
+			var a = 23;
 			await _service.UpdateAsync(User.Identity.Name, newUser);
 			await GenerateToken(newUser);
 			LogHistory(UserAction.UserUpdate);
