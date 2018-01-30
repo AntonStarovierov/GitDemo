@@ -108,6 +108,7 @@ namespace AuthenticationService.Controllers
 
 		private static string CreateToken(ClaimsIdentity identity)
 		{
+			var a = 1;
 			var now = DateTime.UtcNow;
 			var jwt = new JwtSecurityToken(
 				AuthOptions.Issuer,
