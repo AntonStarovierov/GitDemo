@@ -16,7 +16,7 @@ namespace BookstoreService.Base.ServiceCommunicator
 
 		public async Task<string> GetAsync(string url)
 		{
-			var a = 2;
+			var a = 3;
 			var response = await _httpClient.GetAsync(url);
 			return await response.Content.ReadAsStringAsync();
 		}
