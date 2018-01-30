@@ -132,7 +132,7 @@ namespace AuthenticationService.Controllers
 			{
 				token = GetToken();
 			}
-
+			var b = 2;
 			token = token.Replace("Bearer ", string.Empty);
 			var a = 1;
 			var url = _configuration.HistoryServiceUrl + "api/history/auth";
