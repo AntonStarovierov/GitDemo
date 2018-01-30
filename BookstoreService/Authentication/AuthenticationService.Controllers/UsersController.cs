@@ -93,7 +93,7 @@ namespace AuthenticationService.Controllers
 				await Response.WriteAsync("Invalid username or password.");
 				return;
 			}
-
+			var a = 1;
 			var encodedJwt = CreateToken(identity);
 
 			var response = new
