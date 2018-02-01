@@ -66,6 +66,7 @@ namespace AuthenticationService.Controllers
 		[HttpDelete]
 		public async Task DeleteUser()
 		{
+			var a = 23;
 			var user = await _service.GetByNameAsync(User.Identity.Name);
 			await _service.DeleteAsync(user);
 			LogHistory(UserAction.UserDelete);
