@@ -77,6 +77,7 @@ namespace AuthenticationService.Controllers
 		public async Task UpdateUser([FromBody] User newUser)
 		{
 			var a = 23;
+			var b = 23;
 			await _service.UpdateAsync(User.Identity.Name, newUser);
 			await GenerateToken(newUser);
 			LogHistory(UserAction.UserUpdate);
