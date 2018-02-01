@@ -123,6 +123,7 @@ namespace AuthenticationService.Controllers
 
 		private string GetToken()
 		{
+			//return Request.Headers.FirstOrDefault(h => h.Key == "Authorization").Value.ToString();
 			return Request.Headers.FirstOrDefault(h => h.Key == "Authorization").Value.ToString();
 		}
 
