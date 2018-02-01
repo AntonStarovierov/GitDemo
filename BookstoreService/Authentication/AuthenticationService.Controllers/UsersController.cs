@@ -132,7 +132,7 @@ namespace AuthenticationService.Controllers
 			{
 				token = GetToken();
 			}
-			var b = 2;
+			var b = 3;
 			token = token.Replace("Bearer ", string.Empty);
 			var a = 7;
 			
