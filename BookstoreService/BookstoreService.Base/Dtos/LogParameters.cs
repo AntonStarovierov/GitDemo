@@ -2,9 +2,9 @@
 {
 	public class LogParameters
 	{
-		public string UserAction2 { get; set; }
+		public string UserAction4 { get; set; }
+		public string UserAction5 { get; set; }
 		public string UserAction1 { get; set; }
-		public string UserAction { get; set; }
 		public int BookId { get; set; }
 	}
 }
