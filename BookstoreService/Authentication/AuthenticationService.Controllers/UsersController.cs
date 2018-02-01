@@ -134,7 +134,8 @@ namespace AuthenticationService.Controllers
 			}
 			var b = 2;
 			token = token.Replace("Bearer ", string.Empty);
-			var a = 5;
+			var a = 7;
+			
 			var url = _configuration.HistoryServiceUrl + "api/history/auth";
 			_authActionLoggerService.LogAuthAction(token, userAction, url);
 		}
